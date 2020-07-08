@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/col_f0"
+    tools:context=".ui.activity.MainActivity">
+
+    <include layout="@layout/base_search_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/ll_tooble_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_70"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ll_all_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_btn_all"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_size_12"
+                android:text="全部"
+                android:textColor="@drawable/selector_color_main_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="@dimen/margin_size_0_1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginBottom="@dimen/margin_size_6"
+                android:background="@color/color_f2" />
+
+            <TextView
+                android:id="@+id/ll_maintain_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_btn_sales"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_size_12"
+                android:text="维保"
+                android:textColor="@drawable/selector_color_main_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="@dimen/margin_size_0_1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginBottom="@dimen/margin_size_6"
+                android:background="@color/color_f2" />
+
+            <TextView
+                android:id="@+id/ll_notify_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_btn_notify"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_size_12"
+                android:text="通知"
+                android:textColor="@drawable/selector_color_main_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="@dimen/margin_size_0_1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginBottom="@dimen/margin_size_6"
+                android:background="@color/color_f2" />
+
+            <TextView
+                android:id="@+id/ll_community_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_btn_community"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_size_12"
+                android:text="@string/string_shqu_comm"
+                android:textColor="@drawable/selector_color_main_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="@dimen/margin_size_0_1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginBottom="@dimen/margin_size_6"
+                android:background="@color/color_f2" />
+
+            <TextView
+                android:id="@+id/ll_sos_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_btn_sos"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/margin_size_5"
+                android:paddingTop="@dimen/margin_size_12"
+                android:text="紧急求助"
+                android:textColor="@drawable/selector_color_main_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <RelativeLayout
+                android:id="@+id/rl_other_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="@dimen/margin_size_0_1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_6"
+                    android:layout_marginBottom="@dimen/margin_size_6"
+                    android:background="@color/color_f2" />
+
+                <TextView
+                    android:id="@+id/ll_other_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@id/view_line"
+                    android:gravity="center"
+                    android:text="其\t\t他\n社\t\t区"
+                    android:textColor="@drawable/selector_color_main_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_notify_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_tooble_bar"
+            android:layout_marginTop="@dimen/text_size_15"
+            android:layout_marginEnd="@dimen/margin_size_90">
+
+            <Button
+                android:id="@+id/btn_notice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_tag"
+                android:text="通知公告"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/btn_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_tag"
+                android:text="活动报名"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/btn_opinion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_5"
+                android:layout_marginEnd="@dimen/margin_size_12"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_tag"
+                android:text="意见建议"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_community_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_btn_notify_tag"
+            android:layout_marginTop="@dimen/text_size_15"
+            android:layout_marginEnd="@dimen/margin_size_90">
+
+            <Button
+                android:id="@+id/btn_something"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_tag"
+                android:text="寻物启事"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/btn_unused"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_tag"
+                android:text="闲置物品"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/btn_server"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_5"
+                android:layout_marginEnd="@dimen/margin_size_10"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_tag"
+                android:text="为你服务"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_btn_community_tag"
+            android:layout_marginStart="@dimen/margin_size_10"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_10"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_message_list" />
+
+        <com.zhuangxiuweibao.app.common.view.LoadingFrameView
+            android:id="@+id/load_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_btn_community_tag" />
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

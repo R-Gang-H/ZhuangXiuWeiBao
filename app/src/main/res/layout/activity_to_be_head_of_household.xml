@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f">
+
+    <include
+        android:id="@+id/inc_bar"
+        layout="@layout/base_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_size_50"
+        android:layout_below="@+id/inc_bar"
+        android:layout_marginStart="@dimen/margin_size_20"
+        android:layout_marginTop="@dimen/margin_size_28"
+        android:gravity="center_vertical"
+        android:text="户主注册，请完成以下流程"
+        android:textColor="@color/color_3"
+        android:textSize="25sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
+        android:id="@+id/rv_step_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_text"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:layout_marginBottom="@dimen/margin_size_10" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rv_step_list"
+        android:background="@color/color_f6">
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_rect_g_c50"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/color_f"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

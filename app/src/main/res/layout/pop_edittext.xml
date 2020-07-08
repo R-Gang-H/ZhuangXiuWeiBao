@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:background="@drawable/shape_shadow_bg">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/margin_size_12"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_close" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/C33S18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="回复" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/title"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/tv_code"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="请输入回复"
+        android:text=""
+        android:textColor="@color/color_3"
+        android:textColorHint="@color/color_c3"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_size_17"
+        android:layout_marginBottom="@dimen/margin_size_20"
+        android:background="@mipmap/ic_long_btn_bg"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_f"
+        android:textSize="@dimen/text_size_18" />
+
+
+</RelativeLayout>

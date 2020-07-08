@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MyActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/margin_size_55"
+            android:layout_height="@dimen/margin_size_55"
+            android:layout_margin="@dimen/margin_size_15"
+            android:src="@mipmap/icon_avatar"
+            app:riv_corner_radius="@dimen/margin_size_50" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:text="张三"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_20" />
+
+        <TextView
+            android:id="@+id/tv_huzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_avatar"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:text="户主"
+            android:lines="1"
+            android:layout_toStartOf="@id/iv_qrcode"
+            android:textColor="@color/color_9"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_size_20"
+            android:src="@mipmap/arrow_right_gray" />
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/iv_arrow_right"
+            android:padding="@dimen/margin_size_6"
+            android:src="@mipmap/icon_qrcode" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@color/white" />
+
+</RelativeLayout>

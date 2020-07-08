@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.HouseDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_45">
+
+            <RelativeLayout
+                android:id="@+id/rl_back_button"
+                android:layout_width="45dp"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_title_left"
+                    android:layout_width="@dimen/margin_size_28"
+                    android:layout_height="@dimen/margin_size_28"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/arrow_left_white"
+                    app:riv_corner_radius="@dimen/margin_size_50" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="我的住房"
+                android:textColor="@color/color_3"
+                android:textSize="@dimen/text_size_18"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_house_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:text="卫生间"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_house_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_house_name"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_4"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:text="面积\t:\t9.2平米\t\t|\t\t朝向\t:\t\t无"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title"
+        android:overScrollMode="never" />
+
+</RelativeLayout>

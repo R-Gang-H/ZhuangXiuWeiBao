@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <ImageView
+        android:id="@+id/img_abo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_210"
+        android:layout_below="@id/toolbar"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_shequ_bg" />
+
+    <TextView
+        android:id="@+id/tv_abo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_abo"
+        android:layout_margin="@dimen/margin_size_10"
+        android:layout_marginStart="13dp"
+        android:lineSpacingExtra="6dp"
+        android:text="东边小区介绍，纯板社区，采撷阳光社区规划以横向自然轴结合纵向人文轴，将人本尺度理念深植50万平米理想生活城内。全社区纯南向布局的阳光板楼，为每一户家庭采撷每天最新鲜阳光。户型方正通透，多种选择专为智慧精英奉献阳光一居、温馨两居、舒适三居、阔朗四居，户型方正合理、全南向通透布局、舒适宜居，从71平米到201平米丰富而合理的户型区间组合，适用不同家庭"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_cancel"
+            android:gravity="center"
+            android:text="呼叫住户"
+            android:textColor="@color/col_02"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_bt_left"
+            android:gravity="center"
+            android:text="使用门禁"
+            android:textColor="@color/color_f"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+</RelativeLayout>

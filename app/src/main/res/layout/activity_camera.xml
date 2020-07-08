@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhuangxiuweibao.app.ui.widget.MySurfaceView
+        android:id="@+id/sur_idcard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_return"
+            android:layout_width="@dimen/margin_size_50"
+            android:layout_height="@dimen/margin_size_50"
+            android:scaleType="centerInside"
+            android:src="@mipmap/arrow_left_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_50"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="扫描身份证"
+            android:textColor="@color/color_f"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/img_idcard"
+            android:layout_width="300dp"
+            android:layout_height="190dp"
+            android:layout_below="@id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_size_80"
+            android:background="@mipmap/scan_idcard" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_idcard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_size_25"
+            android:text="@string/string_click_picture"
+            android:textColor="@color/color_f"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_torch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_size_30"
+        android:layout_marginBottom="@dimen/margin_size_35"
+        android:button="@null"
+        android:drawableTop="@mipmap/ic_torch"
+        android:drawablePadding="@dimen/margin_size_9"
+        android:text="打开手电筒"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+
+    <ImageView
+        android:id="@+id/img_take"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/cb_torch"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_takephoto" />
+
+</RelativeLayout>

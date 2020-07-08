@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_menu"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_size_57"
+    android:background="@color/color_f">
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_1"
+        android:layout_below="@id/tv_sos_content"
+        android:background="@color/col_e8" />
+
+    <TextView
+        android:id="@+id/tv_relation_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_size_17"
+        android:layout_toEndOf="@id/iv_avatar"
+        android:drawablePadding="@dimen/margin_size_10"
+        android:gravity="center"
+        android:minEms="2"
+        android:text="父亲"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="@dimen/margin_size_1"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_size_15"
+        android:layout_toEndOf="@id/tv_relation_name"
+        android:background="@color/col_e0" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/view_line"
+        android:gravity="center"
+        android:minEms="2"
+        android:text="爸爸"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_size_11"
+        android:background="@mipmap/ic_relation_bg"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/col_02"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

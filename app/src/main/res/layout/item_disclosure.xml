@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/C33S18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:text="添加附件" />
+
+    <TextView
+        style="@style/C66S14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:text="选择执行人 *" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/margin_size_100"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="@dimen/margin_size_10">
+
+        <TextView
+            android:id="@+id/img_name"
+            style="@style/C33S18"
+            android:layout_width="@dimen/margin_size_120"
+            android:layout_height="48dp"
+            android:background="@mipmap/ic_add"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/img_del"
+            android:layout_width="@dimen/margin_size_20"
+            android:layout_height="@dimen/margin_size_20"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_close"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f6" />
+
+</LinearLayout>

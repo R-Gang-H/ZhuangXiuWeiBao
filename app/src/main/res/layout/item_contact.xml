@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_menu"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/color_f">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_size_15"
+        android:src="@mipmap/icon_avatar"
+        app:riv_corner_radius="@dimen/margin_size_50" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_17"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:layout_toEndOf="@id/iv_avatar"
+        android:drawablePadding="@dimen/margin_size_10"
+        android:gravity="center_vertical"
+        android:text="程之城"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_relation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginStart="@dimen/margin_size_17"
+        android:layout_marginTop="@dimen/margin_size_5"
+        android:layout_toEndOf="@id/iv_avatar"
+        android:drawablePadding="@dimen/margin_size_10"
+        android:gravity="center_vertical"
+        android:text="父子"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_size_10"
+        android:layout_marginEnd="@dimen/margin_size_10"
+        android:background="@color/col_e0" />
+
+</RelativeLayout>

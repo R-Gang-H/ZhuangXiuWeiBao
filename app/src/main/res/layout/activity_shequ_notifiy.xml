@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6"
+    tools:context=".ui.activity.ShequNotifiyActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn_tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_60"
+        android:layout_below="@id/toolbar"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_server"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_10"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_tag"
+            android:text="通知公告"
+            android:textColor="@drawable/selector_color_tag_btn"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            android:id="@+id/btn_something"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_5"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_tag"
+            android:text="活动报名"
+            android:textColor="@drawable/selector_color_tag_btn"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            android:id="@+id/btn_unused"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_5"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_tag"
+            android:text="意见建议"
+            android:textColor="@drawable/selector_color_tag_btn"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            android:id="@+id/btn_no_tag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_5"
+            android:layout_marginEnd="@dimen/margin_size_10"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_tag"
+            android:text="不加标签"
+            android:textColor="@drawable/selector_color_tag_btn"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_btn_tag"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@color/white"
+        android:hint="请输入标题"
+        android:padding="@dimen/margin_size_15"
+        android:singleLine="true"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_title"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请输入您的内容"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="8"
+        android:minLines="6"
+        android:paddingLeft="@dimen/margin_size_15"
+        android:paddingTop="@dimen/margin_size_20"
+        android:paddingRight="@dimen/margin_size_15"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_16" />
+
+    <EditText
+        android:id="@+id/et_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_content"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@color/white"
+        android:hint="链接"
+        android:padding="@dimen/margin_size_15"
+        android:singleLine="true"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_link"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@mipmap/ic_login_btn_bg"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

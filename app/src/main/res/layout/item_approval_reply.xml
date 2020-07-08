@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:text="345"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_index"
+            android:background="@color/col_e6"
+            android:visibility="gone" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/rou_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_line"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            app:riv_corner_radius="@dimen/margin_size_50"
+            android:src="@mipmap/icon_default" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_toEndOf="@id/rou_head"
+            android:text="345"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginStart="@dimen/margin_size_5"
+            android:layout_toEndOf="@id/rou_head"
+            android:text="345"
+            android:textColor="@color/color_9"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rou_head"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:layout_marginBottom="@dimen/margin_size_15"
+            android:text="345"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18" />
+
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_reply"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:background="@color/col_e6" />
+    </RelativeLayout>
+
+</LinearLayout>

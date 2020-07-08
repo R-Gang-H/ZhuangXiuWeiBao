@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_15"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginBottom="@dimen/margin_size_10"
+        android:text="小红：同意"
+        android:textColor="@color/color_3"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/other01"
+        android:layout_width="@dimen/margin_size_75"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_20"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginBottom="@dimen/margin_size_15"
+        android:text="审批人"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tvWorker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_25"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginBottom="@dimen/margin_size_15"
+        android:layout_toEndOf="@id/other01"
+        android:text="fhfgh "
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

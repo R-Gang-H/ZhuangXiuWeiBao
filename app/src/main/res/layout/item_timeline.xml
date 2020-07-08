@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f"
+    android:paddingStart="@dimen/margin_size_15"
+    android:paddingEnd="@dimen/margin_size_15">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="234"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_date"
+        android:layout_alignEnd="@id/tv_date"
+        android:layout_marginTop="@dimen/margin_size_3"
+        android:text="234"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_12" />
+
+    <RelativeLayout
+        android:id="@+id/rel_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/tv_date">
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-70dp"
+            android:src="@mipmap/timeline" />
+
+        <ImageView
+            android:id="@+id/img_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_size_10"
+            android:src="@mipmap/icon_timeline" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/rel_line"
+        android:includeFontPadding="false"
+        android:text="1222"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_opinion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_alignStart="@id/tv_name"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="@dimen/margin_size_3"
+        android:text="2121"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_14" />
+</RelativeLayout>

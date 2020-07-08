@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4">
+
+    <include
+        android:id="@+id/inc_bar"
+        layout="@layout/base_title_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/xrv_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inc_bar"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/bg_rect_g_c50"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/color_f"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_above="@+id/tv_next"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/color_9"
+        android:textSize="14sp" />
+
+</RelativeLayout>

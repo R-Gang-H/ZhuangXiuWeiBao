@@ -1,0 +1,181 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/transparent20</item>
+        <item name="colorAccent">@color/col_02</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--toolbar标题栏样式-->
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--白色主题样式，，注意每一项都不能少-->
+    <style name="picture.white.style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">@color/transparent</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture.statusFontColor">true</item>
+        <!--返回键图标-->
+        <item name="picture.leftBack.icon">@mipmap/arrow_left_white</item>
+        <!--标题下拉箭头-->
+        <item name="picture.arrow_down.icon">@mipmap/orange_arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture.arrow_up.icon">@mipmap/orange_arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture.title.textColor">@color/black</item>
+        <!--标题栏右边文字-->
+        <item name="picture.right.textColor">@color/black</item>
+        <!--图片列表勾选样式-->
+        <item name="picture.checked.style">@drawable/picture_checkbox_selector</item>
+        <!--开启图片列表勾选数字模式,开启的话勾选样式要换-->
+        <item name="picture.style.checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture.style.numComplete">true</item>
+        <!--图片列表底部背景色-->
+        <item name="picture.bottom.bg">@color/color_fa</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture.preview.textColor">@color/tab_color_false</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture.complete.textColor">@color/tab_color_false</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture.ac_preview.title.bg">@color/white</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture.ac_preview.title.textColor">@color/black</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture.ac_preview.complete.textColor">@color/tab_color_false</item>
+        <!--预览界面底部背景色-->
+        <item name="picture.ac_preview.bottom.bg">@color/color_fa</item>
+        <!--预览界面返回箭头-->
+        <item name="picture.preview.leftBack.icon">@mipmap/arrow_left_white</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture.crop.toolbar.bg">@color/bar_grey</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture.crop.status.color">@color/bar_grey</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture.crop.title.color">@color/white</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
+    </style>
+
+    <!--dialog-->
+    <!--hrg dialog-->
+    <style name="dialog" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 背景变暗 -->
+        <item name="android:background">@null</item>
+        <!--背景颜色 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--是否有覆盖-->
+    </style>
+
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="CAAS15">
+        <item name="android:textColor">@color/color_aa</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="C33S16">
+        <item name="android:textColor">@color/color_3</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="C66S14">
+        <item name="android:textColor">@color/crop__button_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="C66S16">
+        <item name="android:textColor">@color/crop__button_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--col_02-->
+    <style name="C02S18">
+        <item name="android:textColor">@color/col_02</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="C33S18">
+        <item name="android:textColor">@color/color_3</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CffS18">
+        <item name="android:textColor">@color/color_f</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CAAS18">
+        <item name="android:textColor">@color/color_aa</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="C99S18">
+        <item name="android:textColor">@color/color_9</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--加载框-->
+    <declare-styleable name="LoadingFrameView">
+        <attr name="fv_emptyIcon" format="reference" />
+        <attr name="fv_emptyInfo" format="string" />
+        <attr name="fv_noIcon" format="reference" />
+        <attr name="fv_noInfo" format="string" />
+        <attr name="fv_repeatIcon" format="reference" />
+        <attr name="fv_repeatInfo" format="string" />
+        <attr name="fv_repeatBt" format="string" />
+    </declare-styleable>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

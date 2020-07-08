@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddFacilityActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/base_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_loc_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_size_57"
+        android:layout_below="@id/title_bar"
+        android:background="@color/color_f"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_size_15"
+        android:text="设施名称"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_18" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_57"
+        android:layout_below="@id/title_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_loc_name"
+        android:background="@color/color_f"
+        android:gravity="end|center_vertical"
+        android:hint="请输入"
+        android:paddingEnd="@dimen/margin_size_20"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_1"
+        android:layout_below="@id/et_name"
+        android:layout_marginStart="@dimen/margin_size_10"
+        android:layout_marginEnd="@dimen/margin_size_10"
+        android:background="@color/col_e6" />
+
+    <TextView
+        android:id="@+id/tv_loc_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_size_57"
+        android:layout_below="@id/line"
+        android:background="@color/color_f"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_size_15"
+        android:text="单位"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_18" />
+
+    <EditText
+        android:id="@+id/et_unit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_57"
+        android:layout_below="@id/line"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_loc_unit"
+        android:background="@color/color_f"
+        android:gravity="end|center_vertical"
+        android:hint="请输入"
+        android:paddingEnd="@dimen/margin_size_20"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_unit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_size_30"
+        android:background="@mipmap/ic_login_btn_bg"
+        android:text="确认"
+        android:textColor="@color/color_f"
+        android:textSize="@dimen/text_size_18" />
+</RelativeLayout>

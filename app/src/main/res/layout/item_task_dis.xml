@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/margin_size_15"
+    android:paddingEnd="@dimen/margin_size_15"
+    android:background="@color/color_f">
+
+    <TextView
+        android:id="@+id/tv_loc_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_16"
+        android:gravity="center"
+        android:text="经营交底对比分析表"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_loc_name"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:layout_marginBottom="@dimen/margin_size_15"
+        android:background="@color/color_f"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_size_20"
+        android:text="2019-12-3 12:42:16"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_original"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_size_40"
+        android:layout_below="@id/tv_loc_name"
+        android:layout_marginEnd="@dimen/margin_size_5"
+        android:layout_toStartOf="@id/tv_contrast"
+        android:gravity="center"
+        android:paddingEnd="@dimen/margin_size_15"
+        android:text="查看原文件"
+        android:textColor="@color/col_02b7d6"
+        android:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_contrast"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_size_40"
+        android:layout_below="@id/tv_loc_name"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text="查看对比分析"
+        android:textColor="@color/col_02b7d6"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_1"
+        android:layout_below="@id/tv_name"
+        android:background="@color/col_e6" />
+
+</RelativeLayout>

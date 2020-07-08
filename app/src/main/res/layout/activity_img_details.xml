@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f">
+
+    <include
+        android:id="@+id/inc_bar"
+        layout="@layout/base_title_bar" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_big_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/inc_bar" />
+
+    <TextView
+        android:id="@+id/tv_uploader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vp_big_image"
+        android:layout_marginStart="@dimen/margin_size_15"
+        android:layout_marginTop="@dimen/margin_size_15"
+        android:text="上传者"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_uploader"
+        android:layout_marginStart="@dimen/margin_size_15"
+        android:text="时间"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/text_size_16" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/xre_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_size_12" />
+
+</RelativeLayout>

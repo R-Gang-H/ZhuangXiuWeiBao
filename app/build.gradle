@@ -1,0 +1,190 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.zhuangxiuweibao.app"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        //添加如下配置 开启annotation processor
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", 'x86'
+        }
+
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled true    // Enable RS support
+
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'GoogleAppIndexingWarning'
+    }
+    signingConfigs {
+        configs {
+            keyAlias 'zhuangxiuweibao'
+            keyPassword 'zhuangxiuweibao'
+            storeFile file('../zhuangxiuweibao.jks')
+            storePassword 'zhuangxiuweibao'
+        }
+    }
+    buildTypes {
+        release {
+            // 不显示Log, 在java代码中的调用方式为：BuildConfig.LOG_DEBUG
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.configs
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            //zipAlign 优化
+            zipAlignEnabled true
+            // 开启代码混淆
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.configs
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "ZXWB_${variant.versionCode}_${variant.versionName}_${releaseTime()}.apk"
+        }
+    }
+
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    //解耦，日志
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    // 滚轮选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.3'
+
+    // 拍照/选择图片
+    implementation 'com.jph.takephoto:takephoto_library:4.0.3'
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //aliyun
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.2'
+
+    //Progress
+    implementation 'com.white:progressview:1.0.1@aar'
+
+    //compress image
+    implementation 'com.zxy.android:tiny:0.1.0'
+
+    //okhttp
+    implementation 'com.lzy.net:okhttputils:1.8.1'
+    implementation 'com.lzy.net:okhttpserver:1.0.3'
+
+    //rxjava2
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    //retrofit
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'//整合适配
+
+    // easypermissions 权限
+    implementation 'pub.devrel:easypermissions:1.2.0'
+
+    // BGA Zxing
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+
+    implementation('com.jcodecraeer:xrecyclerview:1.5.9') {
+//        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support'
+    }
+
+    // dialog
+    implementation 'com.github.ForgetAll:LoadingDialog:v1.0.4'
+
+    // 沉浸式状态栏
+    implementation 'com.jaeger.statusbarutil:library:1.5.0'
+
+    // lombok
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+    compileOnly "org.projectlombok:lombok:1.16.20"
+
+    // 导航栏
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.2.5'
+
+    // 圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+
+    // 包含Glide
+    implementation('com.github.LuckSiege.PictureSelector:picture_library:v2.2.3');
+
+    //身份证识别
+    implementation 'com.alibaba:fastjson:1.2.15'
+    //noinspection DuplicatePlatformClasses
+    implementation 'org.apache.httpcomponents:httpclient:4.2.1'
+    implementation 'org.apache.httpcomponents:httpcore:4.2.1'
+
+    // 阿里推送
+    implementation('com.aliyun.ams:alicloud-android-push:3.1.6@aar') {
+        transitive true
+    }
+    implementation 'com.aliyun.ams:alicloud-android-third-push:3.0.9@aar'
+    // 阿里推送厂商通道
+    implementation 'com.aliyun.ams:huawei-push:2.6.3.305'
+    implementation 'com.aliyun.ams:huawei-push-base:2.6.3.305'
+    implementation 'com.aliyun.ams:meizu-push:3.8.7.1'
+    implementation 'com.aliyun.ams:third_vivopush:2.9.0.1'
+
+    // x5 tbs
+    implementation 'com.tencent.tbs.tbssdk:sdk:43697'
+
+}
+repositories {
+    mavenCentral()
+}

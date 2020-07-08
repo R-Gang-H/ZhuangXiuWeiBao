@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f"
+    tools:context=".ui.activity.ShequAuditDetailActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <com.zhuangxiuweibao.app.common.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_btn"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_size_10">
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_13"
+                android:layout_marginTop="@dimen/margin_size_12"
+                android:layout_marginEnd="@dimen/margin_size_13"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="3dp"
+                android:text="豆各庄乡张女士发布的新内容待审核"
+                android:textColor="@color/color_2"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:id="@+id/lin_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_text"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_size_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_size_5"
+                    android:drawableStart="@mipmap/icon_image"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="社区内容审核"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_size_10"
+                    android:layout_marginEnd="@dimen/margin_size_10"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="19/03/21 12:30"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_release_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_time"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:layout_marginTop="@dimen/margin_size_15"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:background="@drawable/shape_msg_tab_bg"
+                android:paddingBottom="@dimen/margin_size_15">
+
+                <TextView
+                    android:id="@+id/tv_work"
+                    android:layout_width="@dimen/margin_size_75"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_20"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:layout_marginEnd="@dimen/margin_size_25"
+                    android:text="发布者"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_worker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:layout_toEndOf="@id/tv_work"
+                    android:text="张女士"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="@dimen/margin_size_75"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_work"
+                    android:layout_marginStart="@dimen/margin_size_20"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:layout_marginEnd="@dimen/margin_size_25"
+                    android:text="联系电话"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_work"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:layout_toEndOf="@id/tv_phone"
+                    android:text="18900008882"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_rela_time"
+                    android:layout_width="@dimen/margin_size_75"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_phone"
+                    android:layout_marginStart="@dimen/margin_size_20"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:layout_marginEnd="@dimen/margin_size_25"
+                    android:text="发布时间"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_work_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_phone"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:layout_toEndOf="@id/tv_rela_time"
+                    android:text="04/15 08:00"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_18" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_release_info"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:layout_marginTop="@dimen/margin_size_5"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:background="@drawable/shape_msg_tab_bg">
+
+                <TextView
+                    android:id="@+id/tv_audit_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_10"
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:background="@mipmap/ic_audit_tag"
+                    android:gravity="center"
+                    android:text="寻物启事" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_audit_tag"
+                    android:layout_marginStart="@dimen/margin_size_10"
+                    android:layout_marginTop="@dimen/margin_size_9"
+                    android:lineSpacingExtra="@dimen/margin_size_5"
+                    android:layout_marginBottom="@dimen/margin_size_10"
+                    android:text="文字内容文字内容，文字内容文字内容 文字内容文字内容文字内容，文字内容 文字内容文字内容文字内容文字内容文 文字内容文字内容文字内容文字内容字 文字内容内容"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_content"
+                    android:layout_marginStart="@dimen/margin_size_6"
+                    android:layout_marginBottom="@dimen/margin_size_10"
+                    android:layout_marginEnd="@dimen/margin_size_6" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_content"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:drawableStart="@mipmap/icon_attch"
+                android:drawablePadding="@dimen/margin_size_8"
+                android:text="社区交流800009001"
+                android:textColor="@color/col_02"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+    </com.zhuangxiuweibao.app.common.view.ReboundScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_no_audit_pass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_cancel"
+            android:gravity="center"
+            android:text="审核不通过"
+            android:textColor="@color/col_02"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_audit_pass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/bg_bt_left"
+            android:gravity="center"
+            android:text="审核通过"
+            android:textColor="@color/color_f"
+            android:textSize="@dimen/text_size_18" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboveView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MyWeiBaoSerActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="@dimen/margin_size_45"
+        android:layout_marginTop="@dimen/margin_size_28"
+        android:layout_marginEnd="@dimen/margin_size_45"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_size_20"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_45">
+
+            <TextView
+                android:id="@+id/btn_weibao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_order_tob"
+                android:gravity="center"
+                android:text="维保订单"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/btn_after"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="售后订单"
+                android:textColor="@drawable/selector_color_tag_btn"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cview"
+        android:layout_marginStart="@dimen/margin_size_15"
+        android:layout_marginTop="@dimen/margin_size_26"
+        android:layout_marginEnd="@dimen/margin_size_15"
+        android:overScrollMode="never"
+        tools:listitem="@layout/item_weibao_order" />
+
+    <com.zhuangxiuweibao.app.common.view.LoadingFrameView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar" />
+
+</RelativeLayout>

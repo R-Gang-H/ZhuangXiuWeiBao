@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f">
+
+    <RelativeLayout
+        android:id="@+id/rel_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/margin_size_15">
+
+        <LinearLayout
+            android:id="@+id/lin_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/bg_bt_left"
+                android:gravity="center"
+                android:text="回复"
+                android:textColor="@color/color_f"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/bg_bt_left"
+                android:gravity="center"
+                android:text="完成并回复"
+                android:textColor="@color/color_f"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lin_menu"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/bg_bt_empty"
+            android:gravity="center"
+            android:text="追加审批人"
+            android:textColor="@color/col_02"
+            android:textSize="@dimen/text_size_18" />
+
+    </RelativeLayout>
+
+    <com.zhuangxiuweibao.app.common.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rel_menu"
+        android:layout_below="@id/inc_bar"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_text"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_size_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_size_5"
+                    android:drawableStart="@mipmap/icon_approval_small"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="审批"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_size_10"
+                    android:layout_marginEnd="@dimen/margin_size_10"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="19/03/21 12:30"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_13"
+                android:layout_marginTop="@dimen/margin_size_12"
+                android:layout_marginEnd="@dimen/margin_size_13"
+                android:gravity="center_vertical"
+                android:text="审批审批"
+                android:textColor="@color/color_2"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tv_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xre_list"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:drawableStart="@mipmap/icon_attch"
+                android:drawablePadding="@dimen/margin_size_8"
+                android:text="审批"
+                android:textColor="@color/col_02"
+                android:textSize="@dimen/text_size_18" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/xre_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_time"
+                android:layout_margin="@dimen/text_size_15"
+                android:background="@drawable/shape_handler_bg"
+                android:overScrollMode="never" />
+        </RelativeLayout>
+    </com.zhuangxiuweibao.app.common.view.ReboundScrollView>
+
+    <include
+        android:id="@+id/inc_bar"
+        layout="@layout/base_title_bar" />
+
+</RelativeLayout>

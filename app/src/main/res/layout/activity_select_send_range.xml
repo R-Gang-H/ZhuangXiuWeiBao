@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SelectSendRangeActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/base_title_bar" />
+
+    <com.zhuangxiuweibao.app.common.view.LoadingFrameView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:visibility="gone" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/companyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnComplete"
+        android:layout_below="@id/title_bar"
+        android:background="@color/color_f"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/btnComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/ic_login_btn_bg"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+</RelativeLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6"
+    tools:context=".ui.activity.NeedReleaseActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <com.zhuangxiuweibao.app.common.view.ReboundScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_next"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/il_step"
+                layout="@layout/layout_step" />
+
+            <LinearLayout
+                android:id="@+id/ll_btn_tag"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/il_step"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_server"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tag"
+                    android:text="为你服务"
+                    android:textColor="@drawable/selector_color_tag_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Button
+                    android:id="@+id/btn_something"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tag"
+                    android:text="寻物启事"
+                    android:textColor="@drawable/selector_color_tag_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Button
+                    android:id="@+id/btn_unused"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tag"
+                    android:text="闲置物品"
+                    android:textColor="@drawable/selector_color_tag_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Button
+                    android:id="@+id/btn_no_tag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_5"
+                    android:layout_marginEnd="@dimen/margin_size_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tag"
+                    android:text="不加标签"
+                    android:textColor="@drawable/selector_color_tag_btn"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_need"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_btn_tag"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="请输入您的需求"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="6"
+                android:minLines="3"
+                android:paddingLeft="@dimen/margin_size_15"
+                android:paddingTop="@dimen/margin_size_20"
+                android:paddingRight="@dimen/margin_size_15"
+                android:textColor="@color/color_3"
+                android:textSize="@dimen/text_size_16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_need"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/margin_size_20">
+
+                <RelativeLayout
+                    android:id="@+id/rl_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_upload_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_size_15"
+                        android:layout_marginTop="@dimen/margin_size_15"
+                        android:text="@string/upload_voice"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <FrameLayout
+                        android:id="@+id/fr_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_upload_voice"
+                        android:layout_marginStart="@dimen/margin_size_15"
+                        android:layout_marginTop="@dimen/margin_size_10"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_voice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_play_voice" />
+
+                        <ImageView
+                            android:id="@+id/iv_audio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/ic_play_small" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_del"
+                            android:layout_width="30dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_del"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_close" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <com.zhuangxiuweibao.app.common.audio.AudioRecorderButton
+                        android:id="@+id/iv_press_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_upload_voice"
+                        android:layout_marginStart="@dimen/margin_size_15"
+                        android:layout_marginTop="@dimen/margin_size_10"
+                        android:layout_toEndOf="@id/fr_voice"
+                        android:background="@mipmap/icon_voice" />
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_size_1"
+                        android:layout_below="@id/iv_press_voice"
+                        android:layout_marginStart="@dimen/margin_size_10"
+                        android:layout_marginTop="@dimen/margin_size_20"
+                        android:layout_marginEnd="@dimen/margin_size_10"
+                        android:background="@color/col_e0" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_upload_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_voice"
+                    android:layout_marginStart="@dimen/margin_size_15"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:text="@string/upload_image"
+                    android:textSize="@dimen/text_size_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_upload_img"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:layout_marginRight="@dimen/margin_size_15"
+                    android:overScrollMode="never" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.zhuangxiuweibao.app.common.view.ReboundScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_next"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_login_btn_bg"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+
+    </RelativeLayout>
+
+    <com.white.progressview.CircleProgressView
+        android:id="@+id/circle_progress_fill_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progress="10"
+        android:visibility="gone"
+        app:innerPadding="3dp"
+        app:outerSize="3dp"
+        app:progressReachColor="@android:color/darker_gray"
+        app:progressStyle="FillInnerArc"
+        app:radius="30dp" />
+
+</RelativeLayout>

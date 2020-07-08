@@ -1,0 +1,46 @@
+[{
+	"relationId": "1",
+	"relationName": "丈夫"
+}, {
+	"relationId": "2",
+	"relationName": "妻子"
+}, {
+	"relationId": "3",
+	"relationName": "爸爸"
+}, {
+	"relationId": "4",
+	"relationName": "妈妈"
+}, {
+	"relationId": "5",
+	"relationName": "儿子"
+}, {
+	"relationId": "6",
+	"relationName": "女儿"
+}, {
+	"relationId": "7",
+	"relationName": "爷爷"
+}, {
+	"relationId": "8",
+	"relationName": "奶奶"
+}, {
+	"relationId": "9",
+	"relationName": "外公"
+}, {
+	"relationId": "10",
+	"relationName": "外婆"
+}, {
+	"relationId": "11",
+	"relationName": "孙子"
+}, {
+	"relationId": "12",
+	"relationName": "孙女"
+}, {
+	"relationId": "13",
+	"relationName": "外孙"
+}, {
+	"relationId": "14",
+	"relationName": "外孙女"
+}, {
+	"relationId": "15",
+	"relationName": "暂不提供身份"
+}]

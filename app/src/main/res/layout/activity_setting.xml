@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:conteAxt=".ui.activity.SettingActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_logout"
+        android:layout_below="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginBottom="@dimen/margin_size_31"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="退出当前账号"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f">
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_1"
+        android:background="@color/col_e8" />
+
+    <TextView
+        android:id="@+id/tv_relation_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_16"
+        android:gravity="center"
+        android:minEms="2"
+        android:text="父亲"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_relation_name"
+        android:layout_marginTop="@dimen/margin_size_8"
+        android:gravity="center"
+        android:minEms="2"
+        android:text="爸爸"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/margin_size_5"
+        android:layout_marginEnd="@dimen/margin_size_11"
+        android:layout_marginBottom="@dimen/margin_size_15"
+        android:gravity="center"
+        android:text="13300000001"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

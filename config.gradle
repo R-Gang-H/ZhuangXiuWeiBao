@@ -1,0 +1,17 @@
+ext {
+
+    android = [
+            minSdkVersion         : 18,
+            targetSdkVersion      : 28,
+
+            retrofit2ConverterGson: "2.4.0"
+
+    ]
+
+    dependencies = [
+            "retrofit"      : "com.squareup.retrofit2:retrofit:${android["retrofit2ConverterGson"]}",
+            "converter-gson": "com.squareup.retrofit2:converter-gson:${android["retrofit2ConverterGson"]}"
+
+    ]
+
+}

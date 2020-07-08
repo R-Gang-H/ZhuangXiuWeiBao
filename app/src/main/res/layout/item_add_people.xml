@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_5">
+
+        <TextView
+            android:id="@+id/img_name"
+            style="@style/C33S18"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/color_f6"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/img_del"
+            android:layout_width="@dimen/margin_size_20"
+            android:layout_height="@dimen/margin_size_20"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_close"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

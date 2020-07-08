@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title_bar" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:gravity="start|top"
+        android:hint="请填写内容"
+        android:paddingStart="@dimen/margin_size_15"
+        android:paddingTop="@dimen/margin_size_10"
+        android:paddingEnd="@dimen/margin_size_15"
+        android:paddingBottom="@dimen/margin_size_10"
+        android:text=""
+        android:textColor="@color/color_3"
+        android:textColorHint="@color/col_tb"
+        android:textSize="@dimen/text_size_18" />
+
+</LinearLayout>

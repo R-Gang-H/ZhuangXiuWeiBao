@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_size_3"
+    android:background="@drawable/shape_shadow_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_msg_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_1"
+        android:layout_marginEnd="@dimen/margin_size_3"
+        android:background="@drawable/shape_msg_title">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_red_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_14"
+            android:padding="@dimen/margin_size_10"
+            app:cardBackgroundColor="@color/col_fd2f2f"
+            app:cardCornerRadius="@dimen/margin_size_7"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/tv_red_shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:minWidth="@dimen/margin_size_14"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10" />
+        </androidx.cardview.widget.CardView>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ri_icon"
+            android:layout_width="@dimen/margin_size_25"
+            android:layout_height="@dimen/margin_size_25"
+            android:layout_marginStart="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_marginBottom="@dimen/margin_size_14"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_notice"
+            app:riv_corner_radius="@dimen/margin_size_50" />
+
+        <TextView
+            android:id="@+id/tv_msg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_10"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_toEndOf="@id/ri_icon"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:maxLines="1"
+            android:text="版本升级通知"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_housing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_5"
+            android:layout_marginTop="@dimen/margin_size_12"
+            android:layout_toEndOf="@id/tv_msg_title"
+            android:background="@mipmap/icon_btn_hous"
+            android:gravity="center"
+            android:text="东边小区"
+            android:textColor="@color/col_02" />
+
+        <TextView
+            android:id="@+id/tv_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_size_16"
+            android:layout_marginEnd="@dimen/margin_size_18"
+            android:text="19/03/17 12:09"
+            android:textSize="@dimen/text_size_15" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_msg_title"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/margin_size_6"
+        android:maxLines="2"
+        android:paddingStart="@dimen/margin_size_20"
+        android:paddingTop="@dimen/margin_size_20"
+        android:paddingEnd="@dimen/margin_size_20"
+        android:paddingBottom="@dimen/margin_size_20"
+        android:text="安卓版1.1升级，查看本次升级的内容。"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/text_size_16" />
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.EditInfoActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/base_title_bar" />
+
+    <com.zhuangxiuweibao.app.common.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_57"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:text="头像"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/margin_size_45"
+                    android:layout_height="@dimen/margin_size_45"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_size_15"
+                    android:layout_marginRight="@dimen/margin_size_15"
+                    android:layout_toStartOf="@id/iv_right"
+                    app:riv_corner_radius="@dimen/margin_size_50" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_size_15"
+                    android:src="@mipmap/arrow_right_gray" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:layout_marginRight="@dimen/margin_size_10"
+                    android:background="@color/col_e6" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_sex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_57"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rl_avatar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:text="性别"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="120dp"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/arrow_right_gray"
+                    android:drawablePadding="@dimen/margin_size_15"
+                    android:gravity="center_vertical|right"
+                    android:hint="性别"
+                    android:paddingRight="@dimen/margin_size_15"
+                    android:textColor="@color/color_3"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_size_18" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:layout_marginRight="@dimen/margin_size_10"
+                    android:background="@color/col_e6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_57"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rl_sex">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:text="生日"
+                    android:textColor="@color/color_9"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="120dp"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/arrow_right_gray"
+                    android:drawablePadding="@dimen/margin_size_15"
+                    android:gravity="center_vertical|right"
+                    android:hint="生日"
+                    android:maxLength="20"
+                    android:paddingRight="@dimen/margin_size_15"
+                    android:textColor="@color/color_3"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_size_18" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sos_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rl_birthday">
+
+                <TextView
+                    android:id="@+id/tv_sos_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_15"
+                    android:layout_marginTop="@dimen/margin_size_15"
+                    android:text="紧急联系人"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_sos_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_sos_contact"
+                    android:layout_margin="@dimen/margin_size_15"
+                    android:lineSpacingExtra="@dimen/margin_size_5"
+                    android:text="当使用‘紧急求助SOS’时，您的紧急联络人将收到通知并 获取您的当前位置信息。"
+                    android:textColor="@color/color_9"
+                    android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_sos_content"
+                    android:layout_marginStart="@dimen/margin_size_15"
+                    android:layout_marginEnd="@dimen/margin_size_15"
+                    android:overScrollMode="never" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_add_contact"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_57"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rl_sos_contact">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_size_15"
+                    android:drawableStart="@mipmap/icon_add_contact"
+                    android:drawablePadding="@dimen/margin_size_5"
+                    android:gravity="center_vertical"
+                    android:text="添加紧急联系人"
+                    android:textColor="@color/col_02"
+                    android:textSize="@dimen/text_size_18" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.zhuangxiuweibao.app.common.view.ReboundScrollView>
+
+</RelativeLayout>

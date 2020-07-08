@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f">
+
+    <include
+        android:id="@+id/inc_bar"
+        layout="@layout/base_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rel_search"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@id/inc_bar"
+        android:background="@color/color_f7">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:background="@mipmap/bg_search"
+            android:drawableStart="@mipmap/icon_search"
+            android:drawablePadding="@dimen/margin_size_10"
+            android:hint="搜索"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingStart="@dimen/margin_size_25"
+            android:text=""
+            android:textColor="@color/color_3"
+            android:textColorHint="@color/color_9"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/xre_list"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_ok"
+        android:layout_below="@id/rel_search" />
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/ic_login_btn_bg"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/color_f"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="visible" />
+
+</RelativeLayout>

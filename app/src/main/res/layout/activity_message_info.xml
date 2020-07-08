@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6"
+    tools:context=".ui.activity.MessageInfoActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/base_title_bar" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_order_id"
+        android:layout_below="@id/title_bar"
+        android:overScrollMode="never"
+        tools:listitem="@layout/item_message_info" />
+
+    <com.zhuangxiuweibao.app.common.view.LoadingFrameView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar" />
+
+    <TextView
+        android:id="@+id/tv_order_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_foot_view"
+        android:layout_marginStart="@dimen/margin_size_15"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginEnd="@dimen/margin_size_15"
+        android:drawableStart="@mipmap/icon_attch"
+        android:drawablePadding="@dimen/margin_size_5"
+        android:text=""
+        android:textColor="@color/col_02"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_foot_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginBottom="@dimen/margin_size_10">
+
+        <!--========== 维保订单 start ==========-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--住户-->
+            <LinearLayout
+                android:id="@+id/footView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:background="@mipmap/ic_green_bg_02"
+                    android:gravity="center"
+                    android:text="取消服务"
+                    android:textColor="@color/col_02"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_change_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/bg_cancel"
+                    android:gravity="center"
+                    android:text="修改上门时间"
+                    android:textColor="@color/col_02"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rect_g_c50"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="@color/color_f"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <!--工作人员-->
+            <LinearLayout
+                android:id="@+id/ll_foot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginTop="@dimen/margin_size_15"
+                android:layout_marginEnd="@dimen/margin_size_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_turn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_cancel"
+                    android:gravity="center"
+                    android:text="转给同事"
+                    android:textColor="@color/col_02"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_make"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:background="@mipmap/bg_cancel"
+                    android:gravity="center"
+                    android:text="预约上门时间"
+                    android:textColor="@color/col_02"
+                    android:textSize="@dimen/text_size_18" />
+
+            </LinearLayout>
+
+            <!--住户-->
+            <LinearLayout
+                android:id="@+id/FeaturesView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btnLeft"
+                    style="@style/C02S18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="-5dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_cancel"
+                    android:gravity="center"
+                    android:text="申请售后" />
+
+                <TextView
+                    android:id="@+id/btnRight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_bt_left"
+                    android:gravity="center"
+                    android:text="去评价"
+                    android:textColor="@color/color_f"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnAfterSaleOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/ic_login_btn_bg"
+                android:gravity="center"
+                android:text="查看售后详情"
+                android:textColor="@color/color_f"
+                android:textSize="@dimen/text_size_18"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <!--========== 维保订单 end ==========-->
+
+        <!--========== 任务\审批订单 start ==========-->
+        <RelativeLayout
+            android:id="@+id/rel_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/lin_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_bt_left"
+                    android:gravity="center"
+                    android:text="回复"
+                    android:textColor="@color/color_f"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_bt_left"
+                    android:gravity="center"
+                    android:text="完成并回复"
+                    android:textColor="@color/color_f"
+                    android:textSize="@dimen/text_size_18" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_bo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lin_menu"
+                android:layout_alignStart="@id/lin_menu"
+                android:layout_alignEnd="@id/lin_menu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_10"
+                android:background="@mipmap/bg_bt_empty"
+                android:gravity="center"
+                android:text="追加审批人"
+                android:textColor="@color/col_02"
+                android:textSize="@dimen/text_size_18"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <!--========== 任务\审批订单 end ==========-->
+
+        <!--========== 群通知订单 start ==========-->
+        <RelativeLayout
+            android:id="@+id/foot_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btnSign"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_bt_left"
+                    android:gravity="center"
+                    android:text="回执"
+                    android:textColor="@color/color_f"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/btnReply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bg_bt_left"
+                    android:gravity="center"
+                    android:text="回复"
+                    android:textColor="@color/color_f"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_menu"
+                android:layout_alignStart="@id/ll_menu"
+                android:layout_alignEnd="@id/ll_menu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_10"
+                android:background="@mipmap/bg_bt_empty"
+                android:gravity="center"
+                android:text="查看回执情况"
+                android:textColor="@color/col_02"
+                android:textSize="@dimen/text_size_18"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!--========== 群通知订单 end ==========-->
+
+        <!--========== 紧急求助订单 start ==========-->
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/ic_long_btn_bg"
+            android:gravity="center"
+            android:text="回执"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:visibility="gone" />
+        <!--========== 紧急求助订单 end ==========-->
+    </RelativeLayout>
+
+</RelativeLayout>

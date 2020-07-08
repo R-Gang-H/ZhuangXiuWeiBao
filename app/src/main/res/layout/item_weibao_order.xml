@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_shadow_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_after"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginTop="@dimen/margin_size_12"
+            android:text="返修"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_r_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_size_12"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:gravity="center"
+            android:text="2018-4-1 10:00"
+            android:textColor="@color/color_9"
+            android:textSize="@dimen/text_size_16" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_reason"
+            android:layout_margin="@dimen/margin_size_15"
+            android:background="@drawable/shape_handler_bg">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_r_avatar"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_size_8"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar"
+                app:riv_corner_radius="@dimen/margin_size_50" />
+
+            <TextView
+                android:id="@+id/tv_r_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_8"
+                android:layout_toEndOf="@id/iv_r_avatar"
+                android:ellipsize="end"
+                android:maxEms="6"
+                android:maxLines="1"
+                android:text="客厅-墙面 报修"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_r_order_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_r_order_title"
+                android:layout_marginTop="@dimen/margin_size_3"
+                android:layout_toEndOf="@id/iv_r_avatar"
+                android:text="2018-4-1 10:00"
+                android:textColor="@color/color_9"
+                android:textSize="@dimen/text_size_15" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_size_10">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_size_8"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_avatar"
+            app:riv_corner_radius="@dimen/margin_size_50" />
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_15"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:maxLines="1"
+            android:text="客厅-墙面 报修"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_size_18"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:gravity="center"
+            android:text="东边小区"
+            android:textColor="@color/color_9"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/tv_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_order_title"
+            android:layout_marginTop="@dimen/margin_size_8"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:text="2018-4-1 10:00"
+            android:textColor="@color/color_9"
+            android:textSize="@dimen/text_size_15" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

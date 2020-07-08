@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_sos_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/margin_size_10"
+    android:layout_marginBottom="@dimen/margin_size_10"
+    android:background="@mipmap/ic_police_bg"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_sos_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_police" />
+
+    <TextView
+        android:id="@+id/tv_sos_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_9"
+        android:layout_toEndOf="@id/iv_sos_icon"
+        android:text="警务"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_20" />
+
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f"
+    tools:context=".ui.activity.SendWorkActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        style="@style/CffS18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@mipmap/ic_login_btn_bg"
+        android:gravity="center"
+        android:text="提交" />
+
+    <com.zhuangxiuweibao.app.common.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSubmit"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etTitle"
+                style="@style/C33S18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="任务标题"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                style="@style/C33S18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="任务描述"
+                android:minLines="6"
+                android:padding="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/C33S18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="截止日期" />
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    style="@style/C33S18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/arrow_right_gray"
+                    android:drawablePadding="@dimen/margin_size_15"
+                    android:gravity="top|end"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <LinearLayout
+                android:id="@+id/ll_disclosure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/ll_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_content"
+                    android:background="@color/white"
+                    android:hint="链接"
+                    android:padding="@dimen/margin_size_15"
+                    android:singleLine="true"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/color_f6" />
+
+                <TextView
+                    style="@style/C33S18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:text="添加附件" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imgList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="@dimen/margin_size_10"
+                    android:overScrollMode="never" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/color_f6" />
+
+                <TextView
+                    style="@style/C33S18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:text="选择执行人" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/checkList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_15"
+                    android:layout_marginTop="@dimen/margin_size_5"
+                    android:layout_marginEnd="@dimen/margin_size_15"
+                    android:layout_marginBottom="@dimen/margin_size_5"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/color_f6" />
+
+                <TextView
+                    style="@style/C33S18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:text="选择抄送人" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/selectList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_size_15"
+                    android:layout_marginTop="@dimen/margin_size_5"
+                    android:layout_marginEnd="@dimen/margin_size_15"
+                    android:layout_marginBottom="@dimen/margin_size_5"
+                    android:overScrollMode="never" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/color_f6" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.zhuangxiuweibao.app.common.view.ReboundScrollView>
+
+    <com.white.progressview.CircleProgressView
+        android:id="@+id/circle_progress_fill_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progress="10"
+        android:visibility="gone"
+        app:innerPadding="3dp"
+        app:outerSize="3dp"
+        app:progressReachColor="@android:color/darker_gray"
+        app:progressStyle="FillInnerArc"
+        app:radius="30dp" />
+
+</RelativeLayout>

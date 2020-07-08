@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zhuangxiuweibao.app">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 闪光灯权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 振动器权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity">
+        <activity
+            android:name=".ui.activity.MessageInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyTaskDisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FacilityDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.AddFacilityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.FacilityColumnActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.NetWorkDiskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SendWorkActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.MyTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SelectSendRangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SendInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.MainWorkActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChooseIdentityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ToBeHeadOfHouseholdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CheckHeaderInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CheckStaffInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommunitiesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NeedReleaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.HouseGeneralServiceActivity"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".ui.activity.NeedPreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DemandStep1_2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShequAuditDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.EditInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MaintenanceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.OrderHandlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HouseGeneralWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.VCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SosHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyWeiBaoSerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ContactInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SosDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FixedApprovalActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.ShequNotifiyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.household.PostDetailsHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.household.PostDetailsCommunityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ImgDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ReplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SelectPersonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.TaskDetailBriefActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShequCommunActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ApprovalDetailsBriefActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HouseDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ApprovalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.WeiBaoOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyHouseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.household.EmergencyHelpDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ReceiptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.QRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GroupNotifiDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FileDisplayActivity"
+            android:screenOrientation="portrait" /> <!-- 消息接收监听器 （用户可自主扩展） -->
+        <receiver
+            android:name=".data.MyMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".data.MyMessageIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="29521474" />
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="53abfaf08c768b448c0f0155a77e6f67" />
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="102094915" />
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="1c7842195e150c830890f7648195fc6a" />
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="103927011" />
+    </application>
+
+</manifest>

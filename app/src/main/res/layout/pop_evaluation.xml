@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent40">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_rect_c20_f"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_45">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="评价"
+                android:textColor="@color/color_3"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="@dimen/margin_size_45"
+                android:layout_height="@dimen/margin_size_45"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_close" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/col_e6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_25"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/margin_size_80"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:text="施工技术"
+                android:textColor="@color/color_3"
+                android:textSize="18sp" />
+
+            <com.zhuangxiuweibao.app.ui.widget.myratingbar.MyRatingBar
+                android:id="@+id/rat_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:text=""
+                android:textColor="@color/color_c2"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/margin_size_80"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:text="服务态度"
+                android:textColor="@color/color_3"
+                android:textSize="18sp" />
+
+            <com.zhuangxiuweibao.app.ui.widget.myratingbar.MyRatingBar
+                android:id="@+id/rat_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_score2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:text=""
+                android:textColor="@color/color_c2"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_20"
+            android:layout_marginBottom="@dimen/margin_size_30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/margin_size_80"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_15"
+                android:text="价格"
+                android:textColor="@color/color_3"
+                android:textSize="18sp" />
+
+            <com.zhuangxiuweibao.app.ui.widget.myratingbar.MyRatingBar
+                android:id="@+id/rat_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_score3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10"
+                android:layout_marginEnd="@dimen/margin_size_15"
+                android:text=""
+                android:textColor="@color/color_c2"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="@dimen/margin_size_15"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:layout_marginBottom="@dimen/margin_size_20"
+            android:background="@drawable/bg_rect_c4_fd_line"
+            android:gravity="start|top"
+            android:hint="评价（选填）"
+            android:paddingStart="@dimen/margin_size_15"
+            android:paddingTop="@dimen/margin_size_10"
+            android:paddingEnd="@dimen/margin_size_15"
+            android:paddingBottom="@dimen/margin_size_10"
+            android:text=""
+            android:textColor="@color/color_3"
+            android:textColorHint="@color/color_c"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/ic_login_btn_bg"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/color_f"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+</RelativeLayout>

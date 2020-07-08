@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_size_10"
+    android:layout_marginTop="@dimen/margin_size_10"
+    android:layout_marginEnd="@dimen/margin_size_10">
+
+    <RelativeLayout
+        android:id="@+id/rl_utility"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_size_76"
+        android:layout_weight="1"
+        android:background="@drawable/shape_shadow_bg">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_size_20"
+            android:src="@mipmap/icon_toilet" />
+
+        <TextView
+            android:id="@+id/tv_utility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_size_10"
+            android:layout_toEndOf="@id/iv_icon"
+            android:text="卫生间"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_size_76"
+        android:layout_marginStart="@dimen/margin_size_5"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:background="@drawable/shape_shadow_bg">
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="面积 : 9.2平"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_size_25"
+            android:layout_toEndOf="@id/tv_area"
+            android:text="朝向 : 东/南"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f"
+    tools:context=".ui.activity.FixedApprovalActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        style="@style/CffS18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@mipmap/ic_login_btn_bg"
+        android:gravity="center"
+        android:text="提交" />
+
+    <com.zhuangxiuweibao.app.common.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSubmit"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_f6">
+
+                <EditText
+                    android:id="@+id/etTitle"
+                    style="@style/C33S18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:background="@null"
+                    android:hint="审批标题"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvMTitle"
+                    style="@style/C33S18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:text="3.财务审批" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/other01"
+                style="@style/C33S18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:text="审批流程说明:" />
+
+            <TextView
+                android:id="@+id/other02"
+                style="@style/C99S18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="4dp"
+                android:lineSpacingExtra="@dimen/margin_size_3"
+                android:text="申请人>财务部业务>财务部领导>总经理" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                style="@style/C33S18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="审批描述"
+                android:minLines="6"
+                android:padding="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <EditText
+                android:id="@+id/et_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_content"
+                android:background="@color/white"
+                android:hint="链接"
+                android:padding="@dimen/margin_size_15"
+                android:singleLine="true"
+                android:textColor="@color/color_3"
+                android:textSize="@dimen/text_size_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <TextView
+                style="@style/C33S18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:text="添加附件" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imgList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="@dimen/margin_size_10"
+                android:overScrollMode="never" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+
+            <TextView
+                style="@style/C33S18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:text="审批人" />
+
+            <TextView
+                android:id="@+id/teChecker"
+                style="@style/C33S16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:text="无"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/checkList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <GridView
+                android:id="@+id/approverList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:nestedScrollingEnabled="false"
+                android:numColumns="3"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/color_f6" />
+
+            <TextView
+                style="@style/C33S18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:text="抄送人" />
+
+            <TextView
+                android:id="@+id/teCoyptor"
+                style="@style/C33S16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:text="无"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selectList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <GridView
+                android:id="@+id/coptorList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:nestedScrollingEnabled="false"
+                android:numColumns="3"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_f6" />
+        </LinearLayout>
+    </com.zhuangxiuweibao.app.common.view.ReboundScrollView>
+
+    <com.white.progressview.CircleProgressView
+        android:id="@+id/circle_progress_fill_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progress="10"
+        android:visibility="gone"
+        app:innerPadding="3dp"
+        app:outerSize="3dp"
+        app:progressReachColor="@android:color/darker_gray"
+        app:progressStyle="FillInnerArc"
+        app:radius="30dp" />
+
+</RelativeLayout>

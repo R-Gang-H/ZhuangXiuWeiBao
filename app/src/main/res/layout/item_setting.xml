@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_60"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_size_14"
+            android:background="@mipmap/icon_famil"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_size_8"
+            android:layout_toEndOf="@id/iv_icon"
+            android:text="家庭成员"
+            android:textColor="@color/col_6"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_size_20"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/arrow_right_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_size_10"
+            android:layout_marginEnd="@dimen/margin_size_10"
+            android:background="@color/col_e6" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lin_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</LinearLayout>

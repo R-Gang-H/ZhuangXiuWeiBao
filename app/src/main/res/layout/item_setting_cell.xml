@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!-- 按钮下灰色空白 -->
+    <RelativeLayout
+        android:id="@+id/lv_seperate_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_10"
+        android:background="@color/color_f4" />
+
+    <RelativeLayout
+        android:id="@+id/rl_setting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_60"
+        android:layout_below="@+id/lv_seperate_line">
+
+        <com.zhuangxiuweibao.app.common.view.DrawableCenterTextView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_about_us"
+            android:drawablePadding="9dp"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/margin_size_30"
+            android:text="机构名称"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_size_15"
+            android:layout_toLeftOf="@id/tv_setting_arrow"
+            android:text=""
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/tv_setting_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_size_15"
+            android:src="@mipmap/arrow_right_gray" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_setting"
+        android:layout_marginStart="@dimen/margin_size_10"
+        android:layout_marginEnd="@dimen/margin_size_10"
+        android:background="@color/col_e6" />
+
+</RelativeLayout>

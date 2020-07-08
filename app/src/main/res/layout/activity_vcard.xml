@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f6"
+    tools:context=".ui.activity.VCardActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/base_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_size_26"
+        android:background="@drawable/shape_shadow_bg">
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_size_30"
+            android:layout_marginTop="@dimen/margin_size_30"
+            android:layout_marginEnd="@dimen/margin_size_30"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_shequ_bg" />
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="23dp"
+            android:layout_below="@id/iv_qrcode"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin_size_21"
+            android:text="请扫描二维码，添加家庭成员"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_progress_bg"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingTop="15dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="12dp"><!-- android:background="@drawable/corner_rect_transparent_bg" -->
+
+    <ProgressBar
+        android:id="@+id/id_recorder_dialog_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/shape_voice_chat"
+        android:contentDescription="@string/app_name"
+        android:indeterminateDrawable="@drawable/progress_recorder" /><!-- android:background="@anim/progress_round" -->
+
+    <TextView
+        android:id="@+id/id_recorder_dialog_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="0s"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</LinearLayout>
