@@ -90,7 +90,7 @@ public class PostDetailsCommunityActivity extends BaseActivity implements GridIm
                         tvName.setText("通知");
                         tvMTitle.setText(msgEntity.getTitle());
                     }
-                    tvContent.setText(U.getEmoji(msgEntity.getTitle()));
+                    tvContent.setText(U.getEmoji(msgEntity.getContent()));
                     tvData.setText(DateUtils.getDateToString(Long.valueOf(msgEntity.getCreateAt()), "yyyy/MM/dd HH:mm"));
                     linkUrl = msgEntity.getLinkUrl().trim();
                     tvLinkURL.setVisibility(U.isNotEmpty(linkUrl) ? View.VISIBLE : View.GONE);

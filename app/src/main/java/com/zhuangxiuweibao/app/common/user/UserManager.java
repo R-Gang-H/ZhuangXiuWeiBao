@@ -219,7 +219,7 @@ public class UserManager {
     }
 
     public void xgUnPush(Activity activity) {
-//        // 1.获取设备Token
+        // 1.获取设备Token
         String account = U.MD5(UserManager.getInstance().userData.getUid());
         final MyProgressDialog dialog = new MyProgressDialog(activity, true);
         dialog.show();

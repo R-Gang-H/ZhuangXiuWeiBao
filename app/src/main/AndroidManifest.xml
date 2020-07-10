@@ -132,9 +132,6 @@
             android:name=".ui.activity.ContactActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.MaintenanceDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".ui.activity.MyActivity"
             android:screenOrientation="portrait" />
         <activity

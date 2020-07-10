@@ -43,7 +43,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import androidx.appcompat.app.AlertDialog;
-
 import butterknife.BindView;
 import butterknife.OnClick;
 
@@ -128,6 +127,7 @@ public class MessageInfoActivity extends BaseActivity {
     public static final int RESULT_3 = 3;//回复
     public static final int RESULT_4 = 4;//同意并回复
     private boolean isDis;
+    private int evluation;
 
     @Override
     public int getLayoutId() {
@@ -455,6 +455,7 @@ public class MessageInfoActivity extends BaseActivity {
                         weiConfirm("1");// 1 问题已解决
                         break;
                     case "去评价":
+                        evluation = 1;
                         evaluation();
                         break;
                 }
@@ -465,6 +466,7 @@ public class MessageInfoActivity extends BaseActivity {
                         afterSale();
                         break;
                     case "去评价":
+                        evluation = 2;
                         evaluation();
                         break;
                     case "服务完成":
@@ -802,7 +804,11 @@ public class MessageInfoActivity extends BaseActivity {
         new Handler().postDelayed(() -> {
             dialog.dismiss();
             EventBus.getDefault().post(new ToUIEvent(ToUIEvent.MESSAGE_EVENT));
-//            btnAfterSaleOrder.setVisibility(View.GONE);
+            if (evluation == 2) {
+                btnAfterSaleOrder.setVisibility(View.GONE);
+            } else if (evluation == 1) {
+                FeaturesView.setVisibility(View.GONE);
+            }
             mPop.dismiss();
         }, 2000);
         dialog.setView(view);
@@ -1015,9 +1021,8 @@ public class MessageInfoActivity extends BaseActivity {
                 .equals(UserManager.getInstance().userData.getUid())) ? View.GONE : View.VISIBLE);// 是抄送人，隐藏按钮
         boolean isSend = entity.getAddMobile().equals(UserManager.getInstance().userData.getMobile());// 是否是任务发布者
         tvRight.setVisibility(entity.getAgreeStatus().equals("1") || isSend ? View.GONE : View.VISIBLE);// 同意状态 1 同意并回复 2未点击同意按钮
-        tvLeft.setBackgroundResource(entity.getAgreeStatus().equals("1") || isSend ? R.mipmap.ic_login_btn_bg : R.mipmap.bg_bt_left);
 //        tvLeft.setVisibility(entity.getAgreeStatus().equals("1") || isSend ? View.GONE : View.VISIBLE);// 同意状态 1 同意并回复 2未点击同意按钮
-//        tvLeft.setBackgroundResource(entity.getAgreeStatus().equals("1") || isSend ? R.mipmap.ic_login_btn_bg : R.mipmap.bg_bt_left);
+        tvLeft.setBackgroundResource(entity.getAgreeStatus().equals("1") || isSend ? R.mipmap.ic_login_btn_bg : R.mipmap.bg_bt_left);
         tvOrderId.setVisibility(View.VISIBLE);
         tvOrderId.setText(String.format("任务%s", entity.getCreateAt()));
 

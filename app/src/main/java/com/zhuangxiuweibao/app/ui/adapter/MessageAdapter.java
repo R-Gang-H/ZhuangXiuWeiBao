@@ -119,7 +119,7 @@ public class MessageAdapter extends XrecyclerAdapter {
         } else {
             tvMsgTitle.setText(title);
         }
-        tvHousing.setVisibility(xiaoqu.equals("2") ? View.VISIBLE : View.GONE);
+//        tvHousing.setVisibility(xiaoqu.equals("2") ? View.VISIBLE : View.GONE);
         tvMsgTime.setText(DateUtils.getDateToString(
                 Long.parseLong(msgEntity.getCreateAt()), "yyyy/MM/dd HH:mm"));
         if (msgEntity.getType().equals("7")) {

@@ -68,6 +68,7 @@
             android:background="@mipmap/icon_btn_hous"
             android:gravity="center"
             android:text="东边小区"
+            android:visibility="gone"
             android:textColor="@color/col_02" />
 
         <TextView
