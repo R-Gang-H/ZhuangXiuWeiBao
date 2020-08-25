@@ -108,7 +108,7 @@ public class MessageInfoActivity extends BaseActivity {
     MessageInfoAdapter adapter;
     ArrayList<MessageEntity> msgData = new ArrayList<>();
     private MessageEntity msgEntity;
-    private String eventId;
+    private String eventId, addUserName;
     private MessageEntity weiOrderEntity, mTaskDetail, mNotifiDetail, mApprovalDetail, mHelpiDetail;
     private String addisMaketure, addisMaketure1, addisDone, addisDone1, addisPingjia, addisPingjia1;
     private String addisForward, addisForward1, appointmentTime, appointmentTime1;
@@ -159,6 +159,7 @@ public class MessageInfoActivity extends BaseActivity {
         msgEntity = (MessageEntity) getIntent().getSerializableExtra("msgEntity");
         if (U.isNotEmpty(msgEntity)) {
             eventId = msgEntity.getEventId();//主页跳转到外链
+            addUserName = msgEntity.getAddUserName();//回复人姓名
             UserManager.getInstance().isReads(eventId);//处理为已读消息
             getMessageInfo(true);
         }
@@ -173,7 +174,7 @@ public class MessageInfoActivity extends BaseActivity {
                             msgData.clear();
                         }
                         msgData.addAll(data.getData());
-                        adapter.setData(msgData);
+                        adapter.setData(msgData, addUserName);
                         if (msgData.size() > 0) {
                             loadView.delayShowContainer(true);
                         } else {

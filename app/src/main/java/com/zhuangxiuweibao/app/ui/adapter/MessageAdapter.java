@@ -10,13 +10,11 @@ import com.zhuangxiuweibao.app.R;
 import com.zhuangxiuweibao.app.bean.MessageEntity;
 import com.zhuangxiuweibao.app.common.utils.DateUtils;
 import com.zhuangxiuweibao.app.common.utils.GlideUtils;
-import com.zhuangxiuweibao.app.common.utils.U;
 import com.zhuangxiuweibao.app.common.view.xrecyclerview.xrecycleradapter.XrecyclerAdapter;
 import com.zhuangxiuweibao.app.common.view.xrecyclerview.xrecycleradapter.XrecyclerViewHolder;
 import com.zhuangxiuweibao.app.ui.activity.CommunitiesActivity;
 import com.zhuangxiuweibao.app.ui.activity.MessageInfoActivity;
 import com.zhuangxiuweibao.app.ui.activity.ShequAuditDetailActivity;
-import com.zhuangxiuweibao.app.ui.activity.household.PostDetailsCommunityActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +55,8 @@ public class MessageAdapter extends XrecyclerAdapter {
     @Override
     public void convert(XrecyclerViewHolder holder, int position, Context context) {
         MessageEntity msgEntity = msgData.get(position);
+        CharSequence msgTitle = msgEntity.getTitle();
+        CharSequence msgContent = msgEntity.getContent();
         // type:定义： 1：任务 2：通知3：审批 4：紧急求助 5：维保 6：社区交流 7.需要大妈审核的社区交流帖子
         // 8.小喇叭审核通过的通知 9.群通知
         // tagId定义：1:寻物启事2:闲置物品3:为你服务4。通知公告5.活动报名6.意见建议7.群通知
@@ -74,6 +74,12 @@ public class MessageAdapter extends XrecyclerAdapter {
             case "3":// 审批
                 iconImg = R.mipmap.icon_approval_small;
                 title = "审批";
+                if (msgEntity.getType2().equals("S2")// 回复有更新
+                        || msgEntity.getType2().equals("S3")) {// 审批进度有更新
+//                    msgTitle = Html.fromHtml(String.format("<b>%s</b><br/><font color='#333'><b>%s</b></font>&nbsp;\"%s\"",
+//                            msgTitle, msgEntity.getAddUserName(), msgContent));
+                    msgTitle = String.format("%s\n%s\t\"%s\"", msgTitle, msgEntity.getAddUserName(), msgContent);
+                }
                 break;
             case "4":// 紧急求助
                 iconImg = R.mipmap.icon_sos;
@@ -128,7 +134,7 @@ public class MessageAdapter extends XrecyclerAdapter {
             if (msgEntity.getType2().equals("t1")) {// 版本升级通知
                 tvContent.setText("安卓版" + msgEntity.getTitle() + "升级，查看本次升级的内容。");
             } else {
-                tvContent.setText(U.getEmoji(msgEntity.getTitle()));
+                tvContent.setText(msgTitle);
             }
         }
         String messageCount = msgEntity.getMessageCount();

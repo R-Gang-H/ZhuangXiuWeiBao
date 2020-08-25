@@ -150,16 +150,13 @@ dependencies {
     // lombok
     implementation 'org.glassfish:javax.annotation:10.0-b28'
     compileOnly "org.projectlombok:lombok:1.16.20"
+    annotationProcessor 'org.projectlombok:lombok:1.16.20'
 
     // 导航栏
     implementation 'me.majiajie:pager-bottom-tab-strip:2.2.5'
 
     // 圆角图片
     implementation 'com.makeramen:roundedimageview:2.3.0'
-
-    //lombok
-    compileOnly 'org.projectlombok:lombok:1.16.20'
-    annotationProcessor 'org.projectlombok:lombok:1.16.20'
 
     // 包含Glide
     implementation('com.github.LuckSiege.PictureSelector:picture_library:v2.2.3');

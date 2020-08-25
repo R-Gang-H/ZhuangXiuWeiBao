@@ -11,8 +11,6 @@
         android:layout_marginStart="@dimen/margin_size_15"
         android:layout_marginTop="@dimen/margin_size_11"
         android:layout_marginEnd="@dimen/margin_size_15"
-        android:ellipsize="end"
-        android:maxLines="1"
         android:text="您的住房维保需求已发送成功"
         android:textColor="@color/color_3"
         android:textSize="@dimen/text_size_18" />
